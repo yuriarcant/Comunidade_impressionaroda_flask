@@ -10,7 +10,7 @@ import os
 app.config['SECRET_KEY']= 'c8b69b71e54ec4777fc66d232935fcbe'
 
 if os.getenv('DATABASE_URL'):
-    app.config['SQLALCHEMY_DATABASE_URI']= os.getenv('BANCO_DADOS_URL')
+    app.config['SQLALCHEMY_DATABASE_URI']= os.getenv('DATABASE_URL')
 else:
     app.config['SQLALCHEMY_DATABASE_URI']= 'sqlite:///comunidade.db'
 
